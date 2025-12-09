@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Settings</title><link rel="stylesheet" href="/styles.css"></head><body>
+<header class="nav"><h1>Settings</h1><nav><a href="/dashboard">Back</a></nav></header>
+<main class="container">
+  <form method="post" action="/settings">
+    <label>Command prefix<input name="prefix" value="<%= settings.prefix || '!' %>"></label>
+    <label>Auto role (role name)<input name="autoRoleName" value="<%= settings.autoRoleName || '' %>"></label>
+    <button type="submit">Save</button>
+  </form>
+
+  <h3>Welcome message</h3>
+  <form method="post" action="/welcome">
+    <label><input type="checkbox" name="enabled" <%= (settings.enabled)? 'checked' : '' %> > Enable welcome</label>
+    <label>Channel ID<input name="channel" value="<%= settings.channel || '' %>"></label>
+    <label>Message<textarea name="message"><%= settings.message || 'Welcome {user}!' %></textarea></label>
+    <button type="submit">Save Welcome</button>
+  </form>
+</main></body></html>

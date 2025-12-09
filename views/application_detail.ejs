@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Application</title><link rel="stylesheet" href="/styles.css"></head><body>
+<main class="container">
+  <h2>Application <%= application.id %></h2>
+  <p><strong>Name:</strong> <%= application.name %></p>
+  <p><strong>Discord:</strong> <%= application.discordTag %></p>
+  <p><strong>About:</strong> <%= application.about %></p>
+  <p><strong>Status:</strong> <%= application.status %></p>
+  <form method="post" action="/applications/<%= application.id %>/decision">
+    <button name="decision" value="Accepted" type="submit">Accept</button>
+    <button name="decision" value="Rejected" type="submit">Reject</button>
+  </form>
+</main></body></html>

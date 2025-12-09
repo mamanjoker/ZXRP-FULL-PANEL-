@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard</title><link rel="stylesheet" href="/styles.css"></head><body>
+<header class="nav"><h1>ZXRP DASHBOARD</h1><nav><a href="/">Home</a><a href="/settings">Settings</a><a href="/logout">Logout</a></nav></header>
+<main class="container">
+  <h2>Hello, <%= user.username %></h2>
+  <section><h3>Applications</h3><table><thead><tr><th>ID</th><th>Name</th><th>Discord</th><th>Status</th><th>Action</th></tr></thead><tbody>
+    <% apps.forEach(a=>{ %><tr><td><%= a.id %></td><td><%= a.name %></td><td><%= a.discordTag %></td><td><%= a.status %></td><td><a href="/applications/<%= a.id %>">View</a></td></tr><% }) %>
+  </tbody></table></section>
+
+  <section><h3>Tickets</h3><table><thead><tr><th>ID</th><th>Title</th><th>Status</th><th>Action</th></tr></thead><tbody>
+    <% tickets.forEach(t=>{ %><tr><td><%= t.id %></td><td><%= t.title %></td><td><%= t.status %></td><td><% if (t.status!='Closed'){ %><form method="post" action="/ticket/close/<%= t.id %>"><button>Close</button></form><% } %></td></tr><% }) %>
+  </tbody></table></section>
+</main></body></html>
