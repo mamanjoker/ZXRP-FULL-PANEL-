@@ -1,0 +1,12 @@
+{
+  "applications": [],
+  "tickets": [],
+  "settings": {
+    "prefix": "!"
+  },
+  "welcome": {
+    "enabled": false,
+    "channel": null,
+    "message": ""
+  }
+}
