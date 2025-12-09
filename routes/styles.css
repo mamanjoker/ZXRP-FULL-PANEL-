@@ -1,7 +1,0 @@
-body{font-family:system-ui,Arial;background:#f6f7fb;color:#111;margin:0}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#111;color:#fff}
-.container{max-width:900px;margin:20px auto;padding:18px;background:#fff;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
-input,textarea{width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ddd}
-button{padding:8px 12px;border-radius:8px;background:#111;color:#fff;border:0;cursor:pointer}
-table{width:100%;border-collapse:collapse}
-table th,table td{padding:8px;border-bottom:1px solid #eee;text-align:left}
