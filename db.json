@@ -1,0 +1,13 @@
+{
+  "applications": [],
+  "settings": {
+    "prefix": "!",
+    "autoRoleName": ""
+  },
+  "tickets": [],
+  "welcome": {
+    "enabled": false,
+    "channel": null,
+    "message": ""
+  }
+}
